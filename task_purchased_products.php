@@ -20,11 +20,11 @@ $purchasedProducts = purchased_products_by_customer(
 $out = fopen('php://output', 'w');
 
 //CSV header
-fputcsv($out, ["id","customer_ids",]);
+fputcsv($out, ["id","customer_ids",], escape: "");
 
 foreach ($purchasedProducts as $product) {
     $row = [$product->id, $product->customers];
-    fputcsv($out, $row);
+    fputcsv($out, $row, escape: "");
 }
 
 fclose($out);

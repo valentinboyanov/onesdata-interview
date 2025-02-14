@@ -29,7 +29,7 @@ $rankedCustomers = ranked_customers(
 $out = fopen('php://output', 'w');
 
 //CSV header
-fputcsv($out, ["id", "firstname", "lastname", "total_euros"]);
+fputcsv($out, ["id", "firstname", "lastname", "total_euros"], escape: "");
 
 foreach ($rankedCustomers as $customer) {
     $row = [
@@ -38,7 +38,7 @@ foreach ($rankedCustomers as $customer) {
         $customer->lastname,
         $customer->totalSpent,
     ];
-    fputcsv($out, $row);
+    fputcsv($out, $row, escape: "");
 }
 
 fclose($out);

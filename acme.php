@@ -115,10 +115,10 @@ function csv_to_rows(string $filepath): iterable
 {
     if (($handle = fopen($filepath, 'r')) !== false) {
 
-        $header = fgetcsv($handle);
+        $header = fgetcsv($handle, escape: "");
         $columns = count($header);
 
-        while (($row = fgetcsv($handle)) !== false) {
+        while (($row = fgetcsv($handle, escape: "")) !== false) {
             $result = [];
 
             for ($i = 0; $i < $columns; $i++) {

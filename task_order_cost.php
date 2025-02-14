@@ -20,11 +20,11 @@ $orderTotals = total_order_cost(
 $out = fopen('php://output', 'w');
 
 //CSV header
-fputcsv($out, ["id","euros",]);
+fputcsv($out, ["id","euros",], escape: "");
 
 foreach ($orderTotals as $order) {
     $row = [$order->order->id, $order->total];
-    fputcsv($out, $row);
+    fputcsv($out, $row, escape: "");
 }
 
 fclose($out);

@@ -2,7 +2,7 @@
 
 Solutions for [onesdata/interview](https://github.com/onesdata/interview):
 
-- [PHP](php)
+- [Vanilla PHP](php)
 
 # Exercise
 

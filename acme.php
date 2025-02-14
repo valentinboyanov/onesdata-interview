@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 declare(strict_types=1);
 
@@ -299,7 +299,7 @@ function test_total_order_cost(): void
     );
 
     $orderTotals = total_order_cost(
-        orders: $orders, 
+        orders: $orders,
         products: $products
     );
 
@@ -357,7 +357,7 @@ function test_ranked_customers(): void
     );
 
     $orderTotals = total_order_cost(
-        orders: $orders, 
+        orders: $orders,
         products: $products
     );
 
@@ -366,7 +366,7 @@ function test_ranked_customers(): void
     );
 
     $rankedCustomers = ranked_customers(
-        customers: $customers, 
+        customers: $customers,
         orderTotals: $orderTotals,
     );
 

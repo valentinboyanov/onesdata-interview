@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 declare(strict_types=1);
 
@@ -13,7 +13,7 @@ $products = to_products(
 );
 
 $orderTotals = total_order_cost(
-    orders: $orders, 
+    orders: $orders,
     products: $products
 );
 
@@ -22,7 +22,7 @@ $customers = to_customers(
 );
 
 $rankedCustomers = ranked_customers(
-    customers: $customers, 
+    customers: $customers,
     orderTotals: $orderTotals,
 );
 
@@ -33,7 +33,7 @@ fputcsv($out, ["id", "firstname", "lastname", "total_euros"], escape: "");
 
 foreach ($rankedCustomers as $customer) {
     $row = [
-        $customer->id, 
+        $customer->id,
         $customer->firstname,
         $customer->lastname,
         $customer->totalSpent,

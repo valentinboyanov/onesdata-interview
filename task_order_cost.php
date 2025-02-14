@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 declare(strict_types=1);
 
@@ -13,7 +13,7 @@ $products = to_products(
 );
 
 $orderTotals = total_order_cost(
-    orders: $orders, 
+    orders: $orders,
     products: $products
 );
 
